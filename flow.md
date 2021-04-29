@@ -7,3 +7,5 @@
 5. camera v1 (this version can record videos and click pictures, which it saves to our disk)
 6. camera v2 (we will add filter UI and add styling and animation to buttons)
 7. camera v3 (actual filters will be implemented using canvas)
+8. camera v4 (zoom in and zoom out UI + Functionality)
+9. IndexedDB POC
