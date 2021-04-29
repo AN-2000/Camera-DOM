@@ -59,7 +59,9 @@ function capture() {
   ctx.drawImage(videoPlayer, 0, 0);
     let link = document.createElement("a");
     //using this we are setting name of the image file and date.now will always give it a unique name
+    // Reference : //stackoverflow.com/a/18678698 (Google how to make a download btn in JS) 
   link.download = `${Date.now()}.png`;
-  link.href = c.toDataURL();
+
+ link.href = c.toDataURL(); 
   link.click();
 }
