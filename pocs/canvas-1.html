@@ -16,8 +16,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Friends</title>
-    <!-- C2.4 -->
+    <title>Shapes</title>
+    <!-- C2.5 -->
     <style>
       /* These both css style together with canvas.width and canvas.height property is important to make canvas full screen  */
       /* Note do not use css to set height and width as it stretches the canvas instead of increasing the size in correct ratio  */
@@ -53,35 +53,43 @@
 
       // C3.1
       // canvas follows a grid system of x,y coordinate with origin being at top left corner. x increases from moving left to right and y increase in moving from top to bottom and vice versa
-      
+
       //C3.2
-      // Whenever we create a new canvas all the lines we draw are part of a single path. You can create a new path using beginPath, whenever we create a canvas this function is automatically called for us. But its a good practice to explicitly call it whenever you start creating lines for a specific path(just after starting new canvas)
+      // beginPath method creates a new path everytime its called
 
       //C3.3
       //the moveTo function just moves the drawing cursor without actually drawing anything, to draw you have to call lineTo or functions like fillRect to draw shape
       //the lines you draw using lineTo will be only visible after you call stroke method
 
       //C3.4
-      // In this example we are making the background black by drawing a black rectangle in the entire background and then drawing a green tick on it, after you have taught this in class you can give a break point if you want and ask them to draw a red cross.
+      // In this example we are drawing a checkbox and then drawing a blue-green tick on it, after you have taught this in class you can give a break point if you want and ask them to draw a red cross.
 
-      ctx.beginPath();
       //C3.5
       // When the current path is empty, such as immediately after calling beginPath(), or on a newly created canvas, the first path construction command is always treated as a moveTo(), regardless of what it actually is. For that reason, you will almost always want to specifically set your starting position after resetting a path.
-      ctx.moveTo(0, 0);
 
-      //C3.6
-      // this function draw a rectangle at x,y coordinate of given height and width
-      ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+      // C4.1
+      // This function creates a rectangle at given x,y of given height and width
+      ctx.strokeRect(100, 100, 800, 800);
 
-      //C3.7
-      ctx.moveTo(100, 100);
-      //here we are changing the width of the line that is drawn
-      ctx.lineWidth = 150;
-      //here we are changing the colour of the lines that are drawn
+      // C4.2
+      // first path
+      ctx.beginPath();
+      ctx.moveTo(100, 500);
+      //setting which color lines to draw
+      ctx.strokeStyle = "blue";
+      // setting the width of lines to draw
+      ctx.lineWidth = 80;
+      ctx.lineTo(400, 850);
+      // Stroke function draws out the lines in current path
+      ctx.stroke();
+
+      // Second path
+      ctx.beginPath();
+      ctx.moveTo(400, 800);
       ctx.strokeStyle = "green";
-      ctx.lineTo(300, window.innerHeight - 100);
-      ctx.lineTo(window.innerWidth - 100, 100);
-      //without this function call the above lines that are drawn using lineTo will not be visible
+      ctx.lineTo(1100, 300);
+      // C4.3
+      // In this example you'll see that one line is blue and other is green, this is because for each line we create a path and set the color and then call stroke so suppose if we remove the second beginPath call all the lines will be in same path so when we change the line color to green and call stroke , both lines will be in same path and will get green
       ctx.stroke();
     </script>
   </body>
