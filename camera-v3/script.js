@@ -29,7 +29,7 @@ let captureBtn = document.querySelector("#click-picture");
 captureBtn.addEventListener("click", function () {
   let innerDiv = captureBtn.querySelector("#click-div");
   innerDiv.classList.add("capture-animation");
-  capture();
+  capture(filter);
   setTimeout(function () {
     innerDiv.classList.remove("capture-animation");
   }, 1000);
@@ -84,7 +84,7 @@ function capture(filter) {
   //If filter is not an empty string then apply that filter over the image drawn in canvas by drawing that filter colour rectangle over the entire canvas 
   if (filter !== "") {
     ctx.fillStyle = filter;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillRect(0, 0, c.width, c.height);
   }
   let link = document.createElement("a");
   link.download = `${Date.now()}.png`;
