@@ -12,4 +12,4 @@
 10. indexedDB POC
 11. camera v5 (Adding indexedDb and saving the media in indexedDb)
 12. camera v6 (Showing media and gallery)
-13. camera v7 (Downloading and interacting with media)
+13. camera v7 (Downloading and deleting media; styling gallery page)

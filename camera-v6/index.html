@@ -1,15 +1,12 @@
 <!-- Comments are numbered in the form CO to Cn. -->
 
 <!-- C0 -->
-<!-- In this version of camera we will improve on camera v4 and add indexedDB  -->
+<!-- In this version of camera we will improve on camera v5 and add a gallery page where we can view all our saved media. -->
 
 <!-- C1 -->
 <!-- Steps involved:
-1- Create a new script called dbScript. In the script make a request to open a new indexedDb database called camera with version 1. Attach success, error and upgrade event handlers on the request. Create a global variable db and store the request.result from success and upgrade handlers in this variable. In the upgrade handler create and objectStore with name gallery and keypath = mId. Attach this script before the main script in html so that we can use db in main script
-
-2- Create function called addMediaToGallery in dbScript which opens a transaction and add the given media to database. It takes 2 things media and type of media.
-
-3- Now in our main script when we click picture instead of download it we will use the above function to store it. Similarly we will do it for the video. We can confirm if media is being stored in the application tab of dev tools.-->
+1- Create a new html page called gallery.html, attach dbScript in this page.
+2- In the dbScript create a function called viewMedia which will get all the media from indexedDb and render it on gallery page.Call thsi function in script tag of gallery page. Remember viewMedia will be invoked as soon as the page loads, this may not give time to open the db and store it in db variable through which we are creating transactions. So to solve this call viewMedia inside a setTimeout of 100ms-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +14,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Camera - v5</title>
+    <title>Camera - v6</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -40,7 +37,6 @@
       <button id="in">+</button>
       <button id="out">-</button>
     </div>
-    <!-- C2.7  -->
     <script src="dbScript.js"></script>
     <script src="script.js"></script>
   </body>
