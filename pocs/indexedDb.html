@@ -11,9 +11,9 @@
     b- For DB version of type number, give it id vBD
     
     Create 2 buttons and give them id createDb and addNote, in script create a global variable called db and reference these buttons in JS.
-2- Now create a function called createDb, it will get teh values of both input tags and create a db using indexed database of given database name and version. Attach click event listener of createBtn and call createDb function there.
+2- Now create a function called createDb, it will get the values of both input tags and create a db using indexed database of given database name and version. Attach click event listener of createBtn and call createDb function there.
 
-3- Create another function called addNote. This will open a transaction to our indexedDb databse. A transaction is a way to perform CRUD with out indexedDb database. And inside this function we will use transaction to add data to our database. Remember in our createDb function we created a database called notes and inside that database we created a table or an objectStore also called notes. Now in this function we will stores notes to this objectStore. Attach click event listener of addBtn and call addNote function there.
+3- Create another function called addNote. This will open a transaction to our indexedDb databse. A transaction is a way to perform CRUD with our indexedDb database. And inside this function we will use transaction to add data to our database. Remember in our createDb function we created a database called notes and inside that database we created a table or an objectStore also called notes. Now in this function we will stores notes to this objectStore. Attach click event listener of addBtn and call addNote function there.
 
 4- Last step is to create a function through which we can view our Notes. We will add this function to onsuccess method.-->
 

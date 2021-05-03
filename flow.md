@@ -10,3 +10,6 @@
 8. camera v3 (actual filters will be implemented using canvas)
 9. camera v4 (zoom in and zoom out UI + Functionality)
 10. indexedDB POC
+11. camera v5 (Adding indexedDb and saving the media in indexedDb)
+12. camera v6 (Showing media and gallery)
+13. camera v7 (Downloading and interacting with media)
