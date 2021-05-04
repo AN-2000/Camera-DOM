@@ -40,7 +40,6 @@ body {
 video {
   height: 100%;
   width: 100%;
- 
 }
 
 #record-div,
@@ -106,8 +105,6 @@ video {
   z-index: 3;
 }
 
-
-
 .zoom {
   z-index: 3;
   top: 12vh;
@@ -140,4 +137,56 @@ video {
   border-radius: 5px;
   right: 5.3vw;
   background-color: #222;
+}
+
+/* C6.2  */
+.gallery-delete-button,
+.gallery-download-button {
+  border: none;
+  height: 10%;
+  display: block;
+  color: white;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+/* C6.3  */
+.gallery-img-container img,
+.gallery-vid-container video {
+  height: 80%;
+  display: block;
+  width: 100%;
+}
+
+/* C6.4  */
+.gallery-img-container,
+.gallery-vid-container {
+  width: 25rem;
+  background: white;
+  height: 25rem;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+/* C6.6  */
+.gallery-back {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  border: none;
+  background: black;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* C6.7 */
+.gallery-delete-button {
+  background: #d91d1d;
+}
+
+.gallery-download-button {
+  background: #291e1e;
 }
