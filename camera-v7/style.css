@@ -190,3 +190,83 @@ video {
 .gallery-download-button {
   background: #291e1e;
 }
+
+/* C7  */
+@media (max-width: 1024px) {
+  .filter-container {
+    width: 12.5vw;
+  }
+  .zoom {
+    width: 4rem;
+  }
+  #record-video,
+  #click-picture {
+    top: unset;
+    right: unset;
+    bottom: 8rem;
+  }
+
+  #record-video {
+    left: 25rem;
+  }
+  #click-picture {
+    left: 35rem;
+  }
+
+  #gallery-button {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #record-video {
+    left: 15rem;
+  }
+  #click-picture {
+    left: 25rem;
+  }
+  #record-video,
+  #click-picture {
+    bottom: 6rem;
+  }
+}
+@media (max-width: 600px) {
+  .filter-container {
+    height: 10vh;
+    width: 85vw;
+    flex-direction: row;
+    left: 2vw;
+  }
+  .filter {
+    height: 100%;
+    width: calc(100% / 6);
+  }
+  #record-video,
+  #click-picture {
+    height: 4rem;
+    width: 4rem;
+    top: unset;
+    right: unset;
+  }
+  #click-picture {
+    left: 10rem;
+    bottom: 9vh;
+    right: 12rem;
+  }
+  #record-video {
+    left: 4rem;
+    bottom: 9vh;
+
+  }
+
+  #gallery-button {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .zoom {
+    right: 0vw;
+    width: 12vw;
+  }
+}
