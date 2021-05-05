@@ -5,15 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <!-- C6.5  -->
-  <body style="background: #181313d4;
-    display: flex;">
-    <!-- C6.1  -->
-    <button class="gallery-back" onclick="(function handler(){location.assign('index.html')})();">BACK</button>
+  <body style="background: #181313d4; display: flex">
+    <!-- C6.1.A  -->
+    <button class="gallery-back" onclick="">BACK</button>
     <script src="dbScript.js"></script>
     <script>
+      //  C6.1.B  
+      let backBtn = document.querySelector(".gallery-back");
+      backBtn.addEventListener("click", function () {
+        location.assign("index.html");
+      });
       setTimeout(function () {
         viewMedia();
       }, 100);

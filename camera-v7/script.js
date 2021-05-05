@@ -61,6 +61,8 @@ vidRecordBtn.addEventListener("click", function () {
   if (!recordState) {
     recordState = true;
     innerDiv.classList.add("recording-animation");
+    currZoom = 1;
+    videoPlayer.style.transform = `scale(${currZoom})`;
     mediaRecorder.start();
   } else {
     recordState = false;
@@ -81,7 +83,7 @@ navigator.mediaDevices.getUserMedia(constraints).then(function (mediaStream) {
   mediaRecorder.onstop = function () {
     let blob = new Blob(chunks, { type: "video/mp4" });
     chunks = [];
-    // C4.2 
+    // C4.2
     addMediaToGallery(blob, "video");
   };
 });
@@ -101,7 +103,7 @@ function capture(filter) {
     ctx.fillRect(0, 0, c.width, c.height);
   }
 
-  addMediaToGallery(c.toDataURL(),"img")
+  addMediaToGallery(c.toDataURL(), "img");
 }
 
 function addFilterToScreen(filterColor) {

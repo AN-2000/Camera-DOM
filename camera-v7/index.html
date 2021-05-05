@@ -47,14 +47,21 @@
       <button id="out">-</button>
     </div>
 
-    <!-- C5.1  -->
+    <!-- C5.1.A  -->
     <button id="gallery-button">
-      <!-- The onclick handler uses location object and change it from index.html to gallery.html in the same domain  -->
-      <span class="material-icons" style="font-size: 2rem; color: white" onclick="(function handler(){location.assign('gallery.html')})();">
+      <span class="material-icons" style="font-size: 2rem; color: white">
         photo
       </span>
     </button>
     <script src="dbScript.js"></script>
     <script src="script.js"></script>
+    <script>
+      // C5.1.B
+      let galleryBtn = document.querySelector("#gallery-button");
+      // The onclick handler uses location object and change it from index.html to gallery.html in the same domain
+      galleryBtn.addEventListener("click", function () {
+        location.assign("gallery.html");
+      });
+    </script>
   </body>
 </html>

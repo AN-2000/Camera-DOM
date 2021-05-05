@@ -61,6 +61,8 @@ vidRecordBtn.addEventListener("click", function () {
   if (!recordState) {
     recordState = true;
     innerDiv.classList.add("recording-animation");
+     currZoom = 1;
+     videoPlayer.style.transform = `scale(${currZoom})`;
     mediaRecorder.start();
   } else {
     recordState = false;
