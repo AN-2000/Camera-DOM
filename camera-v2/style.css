@@ -13,7 +13,6 @@ body {
   position: fixed;
   right: 6rem;
   top: 36vh;
-  display: block;
   height: 6rem;
   width: 6rem;
   border-radius: 50%;
@@ -29,7 +28,6 @@ body {
   position: fixed;
   right: 6rem;
   top: 50vh;
-  display: block;
   height: 6rem;
   width: 6rem;
   border-radius: 50%;
@@ -101,6 +99,7 @@ video {
   height: 60vh;
   width: 5.5vw;
   position: fixed;
+  /* We have added flex to make it responsive as we will give flex direction row on smaller screen sizes  */
   display: flex;
   flex-direction: column;
   left: 5.3vw;
