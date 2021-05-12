@@ -11,7 +11,7 @@
 3- In the then function create a MediaRecorder object, give it the mediaStream object and save that instance in the variable created in step 2
 4- On mediaRecorder attach 2 event handlers, 
     a-  ondataavaiable => this will collect all the data that is coming from mediastream
-    b-  onstop => this will save all the collected data in file which will be saved to our local storage
+    b-  onstop => this will save all the collected data in file which will be saved to our disk
 5- Attach an click event handler to the button which on click will toggle the recordState and start/stop the recording  -->
 
 <!DOCTYPE html>
@@ -72,14 +72,13 @@
 
           mediaRecorder.ondataavailable = function (e) {
             // C4
-
             // Here we are just pushing the chunks of data coming from mediaStream passed to this mediaRecorder
             chunks.push(e.data);
           };
-
+          
           mediaRecorder.onstop = function () {
             // C5
-
+            
             // The Blob object represents a blob, which is a file-like object of immutable, raw data
 
             // Here we are creating a new blob using the chunks of data, also setting what kind of file is present in blob which here is a video file

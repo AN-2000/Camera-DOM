@@ -12,8 +12,6 @@ body {
   position: fixed;
   right: 6rem;
   top: 36vh;
-  /* block so that we can set height and width  */
-  display: block;
   height: 4rem;
   width: 4rem;
   border-radius: 50%;
@@ -26,7 +24,6 @@ body {
   position: fixed;
   right: 6rem;
   top: 50vh;
-  display: block;
   height: 4rem;
   width: 4rem;
   border-radius: 50%;
